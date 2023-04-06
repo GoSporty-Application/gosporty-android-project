@@ -10,11 +10,12 @@
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="420dp"
-        android:alpha="0.4"
+        android:alpha="0.5"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_balonfutbol2"
         tools:srcCompat="@drawable/bg_balonfutbol2" />
 
     <ImageView
@@ -26,6 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/bg_baloncesto"
         tools:srcCompat="@drawable/bg_baloncesto" />
 
     <EditText
