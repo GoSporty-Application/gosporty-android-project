@@ -8,34 +8,35 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="400dp"
+        android:layout_width="0dp"
+        android:layout_height="420dp"
         android:alpha="0.4"
-        android:scaleType="center"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        tools:srcCompat="@drawable/bg_balonfutbol2" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
         android:alpha="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/bg_baloncesto" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:id="@+id/liUsernameET"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/et_style"
+        android:elevation="5dp"
         android:ems="10"
-        android:fontFamily="@font/Poppins_Regular"
+        android:fontFamily="@font/montserrat"
         android:hint="Nombre de usuario"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
@@ -48,42 +49,115 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
+        android:id="@+id/liPasswordET"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/et_style"
+        android:elevation="5dp"
         android:ems="10"
-        android:fontFamily="@font/Poppins_Regular"
+        android:fontFamily="@font/montserrat"
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/Roboto_Regular"
-        android:text="Recuerdame"
-        android:textColor="@color/black"
-        android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/liUsernameET"
+        app:layout_constraintStart_toStartOf="@+id/liUsernameET"
+        app:layout_constraintTop_toBottomOf="@+id/liUsernameET" />
 
     <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/liRememberCB"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
         android:button="@drawable/cb_shape"
         android:checked="false"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        android:elevation="2dp"
+        android:fontFamily="@font/roboto"
+        android:layoutDirection="rtl"
+        android:text="Recuerdame"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/liPasswordET"
+        app:layout_constraintStart_toStartOf="@+id/liPasswordET"
+        app:layout_constraintTop_toBottomOf="@+id/liPasswordET" />
+
+    <Button
+        android:id="@+id/liLoginBTN"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button_green"
+        android:elevation="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Iniciar sesión"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto"
+        android:text="¿No tienes cuenta?"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/liGoogleIB"
+        app:layout_constraintTop_toBottomOf="@+id/liFacebookIB" />
+
+    <Button
+        android:id="@+id/liRegisterBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@null"
+        android:fontFamily="@font/roboto"
+        android:text="Crear cuenta"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/liSmsIB"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <ImageButton
+        android:id="@+id/liGoogleIB"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/liFacebookIB"
+        app:layout_constraintStart_toStartOf="@+id/liLoginBTN"
+        app:layout_constraintTop_toTopOf="@+id/liFacebookIB"
+        app:srcCompat="@drawable/mui_google" />
+
+    <ImageButton
+        android:id="@+id/liFacebookIB"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/liSmsIB"
+        app:layout_constraintStart_toEndOf="@+id/liGoogleIB"
+        app:layout_constraintTop_toBottomOf="@+id/liLoginBTN"
+        app:srcCompat="@drawable/mui_facebook" />
+
+    <ImageButton
+        android:id="@+id/liSmsIB"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/liFacebookIB"
+        app:layout_constraintEnd_toEndOf="@+id/liLoginBTN"
+        app:layout_constraintTop_toTopOf="@+id/liFacebookIB"
+        app:srcCompat="@drawable/mui_sms" />
 </androidx.constraintlayout.widget.ConstraintLayout>
