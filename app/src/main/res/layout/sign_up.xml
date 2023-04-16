@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:alpha="1"
+        app:layout_constraintBottom_toTopOf="@+id/liUsernameET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_gosporty"
+        tools:srcCompat="@drawable/logo_gosporty" />
+
+    <EditText
+        android:id="@+id/liUsernameET"
+        android:layout_width="236dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/et_style"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:shadowRadius="1"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/suNameTV"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/suUsernameET"
+        android:layout_width="238dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/et_style"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Nombre de usuario"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/liUsernameET"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/suUsernameTV"
+        app:layout_constraintTop_toBottomOf="@+id/liUsernameET" />
+
+    <EditText
+        android:id="@+id/suPasswordET"
+        android:layout_width="238dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/et_style"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/suUsernameET"
+        app:layout_constraintStart_toEndOf="@+id/suPasswordTV"
+        app:layout_constraintTop_toBottomOf="@+id/suUsernameET" />
+
+    <EditText
+        android:id="@+id/suEmailET"
+        android:layout_width="238dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/et_style"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Correo"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/suPasswordET"
+        app:layout_constraintStart_toEndOf="@+id/suEmailTV"
+        app:layout_constraintTop_toBottomOf="@+id/suPasswordET" />
+
+    <TextView
+        android:id="@+id/suEmailTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="54dp"
+        android:text="Correo:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suPasswordTV" />
+
+    <Button
+        android:id="@+id/caBackBTN"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bg_button_green"
+        android:elevation="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Crear Cuenta"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/suRegisterOtherBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="22dp"
+        android:background="@null"
+        android:fontFamily="@font/roboto"
+        android:text="Crear cuenta por otros medios:"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cOpenIB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cOpenIB"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="27dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/caBackBTN"
+        app:layout_constraintEnd_toStartOf="@+id/suSmsIB"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toEndOf="@+id/cBackIB"
+        app:srcCompat="@drawable/mui_facebook" />
+
+    <ImageButton
+        android:id="@+id/cBackIB"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="45dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/cOpenIB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cOpenIB"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/mui_google" />
+
+    <ImageButton
+        android:id="@+id/suSmsIB"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/cOpenIB"
+        app:layout_constraintEnd_toEndOf="@+id/caBackBTN"
+        app:layout_constraintTop_toTopOf="@+id/cOpenIB"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/mui_sms" />
+
+    <TextView
+        android:id="@+id/suNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="53dp"
+        android:text="Nombre:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/suUsernameTV"
+        android:layout_width="99dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="38dp"
+        android:text="Nombre de usuario:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suNameTV" />
+
+    <TextView
+        android:id="@+id/suPasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:text="Contraseña:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suUsernameTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
