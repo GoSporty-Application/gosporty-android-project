@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/epHomeIB2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/blue"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/epProfileIB2"
+        app:layout_constraintStart_toEndOf="@+id/epBookingsIB2"
+        app:srcCompat="@drawable/logo_circulo"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="48dp" />
+
+    <ImageButton
+        android:id="@+id/epBookingsIB2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/blue"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vector_lista"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="48dp" />
+
+    <ImageButton
+        android:id="@+id/epProfileIB2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/blue"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/vector_perfil"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="48dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="25dp"
+        android:alpha="1"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/epBannerET"
+        app:layout_constraintStart_toStartOf="@+id/epBannerET"
+        app:srcCompat="@drawable/photo_perfil"
+        tools:srcCompat="@drawable/photo_perfil" />
+
+    <TextView
+        android:id="@+id/epBannerET"
+        android:layout_width="376dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_button_blue"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/epNameET"
+        android:layout_width="236dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/et_style"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Andrés Castro"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:shadowRadius="1"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toEndOf="@+id/epNameTV"
+        app:layout_constraintTop_toBottomOf="@+id/epBannerET" />
+
+    <EditText
+        android:id="@+id/epUsernameET"
+        android:layout_width="238dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/et_style"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="castrofut"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/epNameET"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/epUsernameTV"
+        app:layout_constraintTop_toBottomOf="@+id/epNameET" />
+
+    <EditText
+        android:id="@+id/epPasswordActualET"
+        android:layout_width="238dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/et_style"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="*******"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/epUsernameET"
+        app:layout_constraintStart_toEndOf="@+id/epPasswordActualTV"
+        app:layout_constraintTop_toBottomOf="@+id/epUsernameET" />
+
+    <EditText
+        android:id="@+id/epNewPaswordET"
+        android:layout_width="238dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/et_style"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Nueva contraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColor="#939393"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/epPasswordActualET"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toEndOf="@+id/epNewPaswordTV"
+        app:layout_constraintTop_toBottomOf="@+id/epPasswordActualET" />
+
+    <TextView
+        android:id="@+id/epNewPaswordTV"
+        android:layout_width="115dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Constraseña nueva:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/epPasswordActualTV" />
+
+    <Button
+        android:id="@+id/epSaveBTN"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="144dp"
+        android:background="@drawable/bg_button_green"
+        android:elevation="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Guardar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/epNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:text="Nombre:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/epBannerET" />
+
+    <TextView
+        android:id="@+id/epUsernameTV"
+        android:layout_width="99dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="38dp"
+        android:text="Nombre de usuario:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/epNameTV" />
+
+    <TextView
+        android:id="@+id/epPasswordActualTV"
+        android:layout_width="108dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:text="Contraseña actual:"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/epUsernameTV" />
+
+    <TextView
+        android:id="@+id/epNombreTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:text="Andrés Castro"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/epHeaderUserTV"
+        app:layout_constraintEnd_toEndOf="@+id/epBannerET" />
+
+    <TextView
+        android:id="@+id/epHeaderUserTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="20dp"
+        android:text="/@castrofut"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/epBannerET"
+        app:layout_constraintEnd_toEndOf="@+id/epBannerET"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2" />
+
+    <ImageButton
+        android:id="@+id/epEditPhotoIB"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:background="@drawable/edit_photo"
+        android:elevation="2dp"
+        app:srcCompat="@drawable/edit_photo"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="67dp"
+        tools:srcCompat="@drawable/circular_basic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
