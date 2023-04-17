@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteY="-87dp">
 
     <ImageButton
-        android:id="@+id/fProfileIB"
+        android:id="@+id/sProfileIB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
@@ -23,7 +23,7 @@
         tools:layout_conversion_absoluteWidth="48dp" />
 
     <ImageButton
-        android:id="@+id/fBookingsIB"
+        android:id="@+id/sBookingsIB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -37,15 +37,15 @@
         tools:layout_conversion_absoluteWidth="48dp" />
 
     <ImageButton
-        android:id="@+id/fHomeIB"
+        android:id="@+id/sHomeIB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:background="@drawable/blue"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fProfileIB"
-        app:layout_constraintStart_toEndOf="@+id/fBookingsIB"
+        app:layout_constraintEnd_toStartOf="@+id/sProfileIB"
+        app:layout_constraintStart_toEndOf="@+id/sBookingsIB"
         app:srcCompat="@drawable/logo_circulo"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="48dp" />
@@ -74,7 +74,7 @@
         app:srcCompat="@android:drawable/divider_horizontal_dark" />
 
     <TextView
-        android:id="@+id/fSiteNameTV"
+        android:id="@+id/sSiteNameTV"
         android:layout_width="218dp"
         android:layout_height="45dp"
         android:layout_marginTop="15dp"
@@ -85,12 +85,12 @@
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/fSiteLogoIV"
-        app:layout_constraintStart_toEndOf="@+id/fBackIB"
+        app:layout_constraintEnd_toStartOf="@+id/sSiteLogoIV"
+        app:layout_constraintStart_toEndOf="@+id/sBackIB"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/fInfoFieldTV"
+        android:id="@+id/sSiteInfoTV"
         android:layout_width="359dp"
         android:layout_height="111dp"
         android:layout_marginStart="15dp"
@@ -109,11 +109,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fSiteNameTV"
+        app:layout_constraintTop_toBottomOf="@+id/sSiteNameTV"
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/fHeaderTV"
+        android:id="@+id/sHeaderTV"
         android:layout_width="371dp"
         android:layout_height="53dp"
         android:layout_marginStart="15dp"
@@ -128,10 +128,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fInfoFieldTV" />
+        app:layout_constraintTop_toBottomOf="@+id/sSiteInfoTV" />
 
     <ScrollView
-        android:id="@+id/fListScrollableSV"
+        android:id="@+id/sListScrollableSV"
         android:layout_width="368dp"
         android:layout_height="104dp"
         android:layout_marginStart="15dp"
@@ -139,24 +139,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.591"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fHeaderTV">
+        app:layout_constraintTop_toBottomOf="@+id/sHeaderTV">
 
         <LinearLayout
-            android:id="@+id/fListVerticalLL"
+            android:id="@+id/sListVerticalLL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_button_blue"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/fListHorizontalLL1"
+                android:id="@+id/sListHorizontalLL1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
 
                 <TextView
-                    android:id="@+id/fHourTV"
+                    android:id="@+id/sNameTV1"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:text=" Fútbol 7 #1"
@@ -168,7 +168,7 @@
                     tools:layout_editor_absoluteY="497dp" />
 
                 <TextView
-                    android:id="@+id/fHourTV1"
+                    android:id="@+id/sFieldSizeTV1"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:text="15 - 20"
@@ -180,7 +180,7 @@
                     tools:layout_editor_absoluteY="497dp" />
 
                 <ImageButton
-                    android:id="@+id/fOpenIB"
+                    android:id="@+id/sGoToFieldIB1"
                     android:layout_width="66dp"
                     android:layout_height="50dp"
                     android:background="@drawable/blue"
@@ -192,14 +192,14 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/fListHorizontalLL2"
+                android:id="@+id/sListHorizontalLL2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
 
                 <TextView
-                    android:id="@+id/fHourTV2"
+                    android:id="@+id/sNameTV2"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:text=" Fútbol 11 #2"
@@ -211,7 +211,7 @@
                     tools:layout_editor_absoluteY="497dp" />
 
                 <TextView
-                    android:id="@+id/fHourTV4"
+                    android:id="@+id/sFieldSizeTV2"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:text="22-30"
@@ -223,7 +223,7 @@
                     tools:layout_editor_absoluteY="497dp" />
 
                 <ImageButton
-                    android:id="@+id/fBookedB"
+                    android:id="@+id/sGoToFieldIB2"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/blue"
@@ -238,7 +238,7 @@
     </ScrollView>
 
     <ImageView
-        android:id="@+id/fSiteLogoIV"
+        android:id="@+id/sSiteLogoIV"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="15dp"
@@ -250,7 +250,7 @@
         tools:srcCompat="@drawable/logo_campnou" />
 
     <ImageButton
-        android:id="@+id/fBackIB"
+        android:id="@+id/sBackIB"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="15dp"
@@ -269,12 +269,12 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="20dp"
         android:elevation="51dp"
-        app:layout_constraintEnd_toEndOf="@+id/fInfoFieldTV"
-        app:layout_constraintTop_toTopOf="@+id/fInfoFieldTV"
+        app:layout_constraintEnd_toEndOf="@+id/sSiteInfoTV"
+        app:layout_constraintTop_toTopOf="@+id/sSiteInfoTV"
         app:srcCompat="@drawable/vector_estrella" />
 
     <TextView
-        android:id="@+id/fAddressTV"
+        android:id="@+id/sAddressTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -284,7 +284,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/fInfoFieldTV" />
+        app:layout_constraintTop_toTopOf="@+id/sSiteInfoTV" />
 
     <TextView
         android:id="@+id/textView7"
@@ -297,8 +297,8 @@
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/fInfoFieldTV"
-        app:layout_constraintTop_toTopOf="@+id/fInfoFieldTV" />
+        app:layout_constraintStart_toStartOf="@+id/sSiteInfoTV"
+        app:layout_constraintTop_toTopOf="@+id/sSiteInfoTV" />
 
     <TextView
         android:id="@+id/textView3"
@@ -311,11 +311,11 @@
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/fInfoFieldTV"
+        app:layout_constraintStart_toStartOf="@+id/sSiteInfoTV"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/fDescriptionTV"
+        android:id="@+id/sSiteScheduleTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
@@ -324,11 +324,11 @@
         android:text="07:00 - 23:59"
         android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/fInfoFieldTV"
+        app:layout_constraintStart_toStartOf="@+id/sSiteInfoTV"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/fGradeTV"
+        android:id="@+id/sGradeTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
@@ -338,7 +338,7 @@
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/fInfoFieldTV"
+        app:layout_constraintEnd_toEndOf="@+id/sSiteInfoTV"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

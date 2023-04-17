@@ -13,7 +13,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginBottom="40dp"
         android:alpha="1"
-        app:layout_constraintBottom_toTopOf="@+id/epNameET"
+        app:layout_constraintBottom_toTopOf="@+id/suNameET"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,7 +21,7 @@
         tools:srcCompat="@drawable/logo_gosporty" />
 
     <EditText
-        android:id="@+id/epNameET"
+        android:id="@+id/suNameET"
         android:layout_width="236dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
@@ -37,11 +37,11 @@
         android:textColorHint="@color/black"
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/epNameTV"
+        app:layout_constraintStart_toEndOf="@+id/suNameTV"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/epUsernameET"
+        android:id="@+id/suUsernameET"
         android:layout_width="238dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
@@ -53,13 +53,13 @@
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/epNameET"
+        app:layout_constraintEnd_toEndOf="@+id/suNameET"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/epUsernameTV"
-        app:layout_constraintTop_toBottomOf="@+id/epNameET" />
+        app:layout_constraintStart_toEndOf="@+id/suUsernameTV"
+        app:layout_constraintTop_toBottomOf="@+id/suNameET" />
 
     <EditText
-        android:id="@+id/epPasswordActualET"
+        android:id="@+id/suPasswordActualET"
         android:layout_width="238dp"
         android:layout_height="52dp"
         android:layout_marginStart="9dp"
@@ -72,12 +72,12 @@
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/epUsernameET"
-        app:layout_constraintStart_toEndOf="@+id/epPasswordActualTV"
-        app:layout_constraintTop_toBottomOf="@+id/epUsernameET" />
+        app:layout_constraintEnd_toEndOf="@+id/suUsernameET"
+        app:layout_constraintStart_toEndOf="@+id/suPasswordActualTV"
+        app:layout_constraintTop_toBottomOf="@+id/suUsernameET" />
 
     <EditText
-        android:id="@+id/epNewPaswordET"
+        android:id="@+id/suNewPaswordET"
         android:layout_width="238dp"
         android:layout_height="52dp"
         android:layout_marginStart="54dp"
@@ -90,12 +90,12 @@
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/epPasswordActualET"
-        app:layout_constraintStart_toEndOf="@+id/epNewPaswordTV"
-        app:layout_constraintTop_toBottomOf="@+id/epPasswordActualET" />
+        app:layout_constraintEnd_toEndOf="@+id/suPasswordActualET"
+        app:layout_constraintStart_toEndOf="@+id/suNewPaswordTV"
+        app:layout_constraintTop_toBottomOf="@+id/suPasswordActualET" />
 
     <TextView
-        android:id="@+id/epNewPaswordTV"
+        android:id="@+id/suNewPaswordTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -104,10 +104,10 @@
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/epPasswordActualTV" />
+        app:layout_constraintTop_toBottomOf="@+id/suPasswordActualTV" />
 
     <Button
-        android:id="@+id/epSaveBTN"
+        android:id="@+id/suSaveBTN"
         android:layout_width="280dp"
         android:layout_height="48dp"
         android:layout_marginBottom="15dp"
@@ -136,34 +136,34 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/cOpenIB"
+        app:layout_constraintBottom_toTopOf="@+id/suOpenIB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/cOpenIB"
+        android:id="@+id/suOpenIB"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="27dp"
         android:background="@color/white"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/epSaveBTN"
+        app:layout_constraintBottom_toTopOf="@+id/suSaveBTN"
         app:layout_constraintEnd_toStartOf="@+id/suSmsIB"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toEndOf="@+id/cBackIB"
+        app:layout_constraintStart_toEndOf="@+id/suBackIB"
         app:srcCompat="@drawable/mui_facebook" />
 
     <ImageButton
-        android:id="@+id/cBackIB"
+        android:id="@+id/suBackIB"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="45dp"
         android:background="@color/white"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/cOpenIB"
+        app:layout_constraintBottom_toBottomOf="@+id/suOpenIB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cOpenIB"
+        app:layout_constraintTop_toTopOf="@+id/suOpenIB"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/mui_google" />
 
@@ -173,14 +173,14 @@
         android:layout_height="48dp"
         android:background="@color/white"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/cOpenIB"
-        app:layout_constraintEnd_toEndOf="@+id/epSaveBTN"
-        app:layout_constraintTop_toTopOf="@+id/cOpenIB"
+        app:layout_constraintBottom_toBottomOf="@+id/suOpenIB"
+        app:layout_constraintEnd_toEndOf="@+id/suSaveBTN"
+        app:layout_constraintTop_toTopOf="@+id/suOpenIB"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/mui_sms" />
 
     <TextView
-        android:id="@+id/epNameTV"
+        android:id="@+id/suNameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -192,7 +192,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
-        android:id="@+id/epUsernameTV"
+        android:id="@+id/suUsernameTV"
         android:layout_width="99dp"
         android:layout_height="55dp"
         android:layout_marginStart="15dp"
@@ -201,10 +201,10 @@
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/epNameTV" />
+        app:layout_constraintTop_toBottomOf="@+id/suNameTV" />
 
     <TextView
-        android:id="@+id/epPasswordActualTV"
+        android:id="@+id/suPasswordActualTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -213,6 +213,6 @@
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/epUsernameTV" />
+        app:layout_constraintTop_toBottomOf="@+id/suUsernameTV" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
