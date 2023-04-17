@@ -31,7 +31,7 @@
         tools:srcCompat="@drawable/bg_baloncesto" />
 
     <EditText
-        android:id="@+id/liUsernameET"
+        android:id="@+id/epNameET"
         android:layout_width="280dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/suUsernameET"
+        android:id="@+id/epUsernameET"
         android:layout_width="280dp"
         android:layout_height="48dp"
         android:layout_marginTop="30dp"
@@ -63,9 +63,9 @@
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/liUsernameET"
-        app:layout_constraintStart_toStartOf="@+id/liUsernameET"
-        app:layout_constraintTop_toBottomOf="@+id/liUsernameET" />
+        app:layout_constraintEnd_toEndOf="@+id/epNameET"
+        app:layout_constraintStart_toStartOf="@+id/epNameET"
+        app:layout_constraintTop_toBottomOf="@+id/epNameET" />
 
     <CheckBox
         android:id="@+id/liRememberCB"
@@ -79,12 +79,12 @@
         android:layoutDirection="rtl"
         android:text="Recuerdame"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/suUsernameET"
-        app:layout_constraintStart_toStartOf="@+id/suUsernameET"
-        app:layout_constraintTop_toBottomOf="@+id/suUsernameET" />
+        app:layout_constraintEnd_toEndOf="@+id/epUsernameET"
+        app:layout_constraintStart_toStartOf="@+id/epUsernameET"
+        app:layout_constraintTop_toBottomOf="@+id/epUsernameET" />
 
     <Button
-        android:id="@+id/caBackBTN"
+        android:id="@+id/epSaveBTN"
         android:layout_width="280dp"
         android:layout_height="48dp"
         android:layout_marginTop="30dp"
@@ -136,7 +136,7 @@
         android:background="@color/white"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/cOpenIB"
-        app:layout_constraintStart_toStartOf="@+id/caBackBTN"
+        app:layout_constraintStart_toStartOf="@+id/epSaveBTN"
         app:layout_constraintTop_toTopOf="@+id/cOpenIB"
         app:srcCompat="@drawable/mui_google" />
 
@@ -149,7 +149,7 @@
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toStartOf="@+id/suSmsIB"
         app:layout_constraintStart_toEndOf="@+id/cBackIB"
-        app:layout_constraintTop_toBottomOf="@+id/caBackBTN"
+        app:layout_constraintTop_toBottomOf="@+id/epSaveBTN"
         app:srcCompat="@drawable/mui_facebook" />
 
     <ImageButton
@@ -159,7 +159,7 @@
         android:background="@color/white"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/cOpenIB"
-        app:layout_constraintEnd_toEndOf="@+id/caBackBTN"
+        app:layout_constraintEnd_toEndOf="@+id/epSaveBTN"
         app:layout_constraintTop_toTopOf="@+id/cOpenIB"
         app:srcCompat="@drawable/mui_sms" />
 </androidx.constraintlayout.widget.ConstraintLayout>
