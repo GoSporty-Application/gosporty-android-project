@@ -32,29 +32,5 @@ class FieldActivity : AppCompatActivity() {
                 Intent(this, ConfirmationActivity::class.java)
             )
         }
-
-        binding.fHomeIB.setOnClickListener {
-            startActivity(
-                Intent(this, HomeActivity::class.java)
-            )
-        }
-
-        binding.fSiteLogoIV.setOnClickListener {
-            startActivity(
-                Intent(this, SiteActivity::class.java)
-            )
-        }
-
-        binding.fBookingsIB.setOnClickListener {
-            startActivity(
-                Intent(this, BookingsActivity::class.java)
-            )
-        }
-
-        binding.fProfileIB.setOnClickListener {
-//            startActivity(
-//                Intent(this, PROFILE)
-//            )
-        }
     }
 }

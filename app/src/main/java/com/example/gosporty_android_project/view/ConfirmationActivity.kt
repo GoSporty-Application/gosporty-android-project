@@ -21,34 +21,16 @@ class ConfirmationActivity : AppCompatActivity() {
             )
         }
 
-        binding.capHomeIB.setOnClickListener {
-            startActivity(
-                Intent(this, HomeActivity::class.java)
-            )
-        }
-
         binding.capSiteLogoIV.setOnClickListener {
             startActivity(
                 Intent(this, SiteActivity::class.java)
             )
         }
 
-        binding.capBookingsIB.setOnClickListener {
-            startActivity(
-                Intent(this, BookingsActivity::class.java)
-            )
-        }
-
         binding.capSubmitBTN.setOnClickListener {
             startActivity(
-                Intent(this, BookingsActivity::class.java)
+                Intent(this, HomeActivity::class.java)
             )
-        }
-
-        binding.capProfileIB.setOnClickListener {
-//            startActivity(
-//                Intent(this, PROFILE)
-//            )
         }
     }
 }
