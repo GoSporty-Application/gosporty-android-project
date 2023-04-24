@@ -32,14 +32,6 @@
             android:exported="true"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".view.EditProfileActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".view.SignUpActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name=".view.SiteActivity"
             android:exported="true"
             android:screenOrientation="portrait"/>
