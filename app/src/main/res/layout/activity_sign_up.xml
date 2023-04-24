@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".view.SignUpActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -152,7 +152,8 @@
         app:layout_constraintEnd_toStartOf="@+id/suSmsIB"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toEndOf="@+id/suBackIB"
-        app:srcCompat="@drawable/mui_facebook" />
+        app:srcCompat="@drawable/mui_facebook"
+        android:contentDescription="facebook"/>
 
     <ImageButton
         android:id="@+id/suBackIB"
@@ -165,7 +166,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/suOpenIB"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/mui_google" />
+        app:srcCompat="@drawable/mui_google"
+        android:contentDescription="google"/>
 
     <ImageButton
         android:id="@+id/suSmsIB"
@@ -177,7 +179,8 @@
         app:layout_constraintEnd_toEndOf="@+id/suSaveBTN"
         app:layout_constraintTop_toTopOf="@+id/suOpenIB"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/mui_sms" />
+        app:srcCompat="@drawable/mui_sms"
+        android:contentDescription="sms"/>
 
     <TextView
         android:id="@+id/suNameTV"

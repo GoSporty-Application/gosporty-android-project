@@ -24,11 +24,13 @@
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
         android:alpha="1"
+        android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:srcCompat="@drawable/bg_baloncesto"
-        tools:srcCompat="@drawable/bg_baloncesto" />
+        android:src="@drawable/logo_gosporty"
+        android:scaleY="1.2"
+        android:scaleX="1.2"/>
 
     <EditText
         android:id="@+id/liNameET"

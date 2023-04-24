@@ -6,48 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <ImageButton
-        android:id="@+id/epHomeIB2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/blue"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/epProfileIB2"
-        app:layout_constraintStart_toEndOf="@+id/epBookingsIB2"
-        app:srcCompat="@drawable/logo_circulo"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="48dp" />
-
-    <ImageButton
-        android:id="@+id/epBookingsIB2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/blue"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/vector_lista"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="48dp" />
-
-    <ImageButton
-        android:id="@+id/epProfileIB2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/blue"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/vector_perfil"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="48dp" />
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
@@ -66,7 +24,7 @@
         android:layout_width="376dp"
         android:layout_height="167dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/bg_button_blue"
+        android:background="@drawable/container_blue_profile"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -79,6 +37,7 @@
         android:layout_width="236dp"
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/et_style"
         android:elevation="5dp"
         android:ems="10"
@@ -157,7 +116,7 @@
         android:layout_marginTop="16dp"
         android:text="Constraseña nueva:"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/epPasswordActualTV" />
 
@@ -165,7 +124,7 @@
         android:id="@+id/epSaveBTN"
         android:layout_width="280dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="144dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/bg_button_green"
         android:elevation="5dp"
         android:fontFamily="@font/montserrat"
@@ -174,10 +133,10 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/epNewPaswordET" />
 
     <TextView
         android:id="@+id/epNameTV"
@@ -187,7 +146,7 @@
         android:layout_marginTop="28dp"
         android:text="Nombre:"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/epBannerET" />
 
@@ -199,7 +158,7 @@
         android:layout_marginTop="38dp"
         android:text="Nombre de usuario:"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/epNameTV" />
 
@@ -211,7 +170,7 @@
         android:layout_marginTop="35dp"
         android:text="Contraseña actual:"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/epUsernameTV" />
 
@@ -245,10 +204,13 @@
         android:layout_width="49dp"
         android:layout_height="49dp"
         android:background="@drawable/edit_photo"
+        android:contentDescription="editPhoto"
         android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
         app:srcCompat="@drawable/edit_photo"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="67dp"
         tools:srcCompat="@drawable/circular_basic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

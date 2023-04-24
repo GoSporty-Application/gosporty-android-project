@@ -21,7 +21,8 @@ class HomeActivity : AppCompatActivity() {
 
     @Override
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState)
+        showFragment(home)
         setContentView(binding.root)
 
         binding.buttonHome.setOnClickListener{
