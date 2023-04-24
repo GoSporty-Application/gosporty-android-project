@@ -51,20 +51,6 @@
         tools:layout_conversion_absoluteWidth="48dp" />
 
     <ImageButton
-        android:id="@+id/capBookingsIB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/blue"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/vector_lista"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="48dp" />
-
-    <ImageButton
         android:id="@+id/capHomeIB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,8 +58,8 @@
         android:background="@drawable/blue"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/capProfileIB"
-        app:layout_constraintStart_toEndOf="@+id/capBookingsIB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo_circulo"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="48dp" />
@@ -321,7 +307,7 @@
         app:layout_constraintTop_toBottomOf="@+id/capDateTV" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/capSubmitBTN"
         android:layout_width="361dp"
         android:layout_height="55dp"
         android:layout_marginStart="15dp"
@@ -334,5 +320,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/capBookingsIB"
+        android:layout_width="74dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vector_lista" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,11 +3,6 @@ package com.example.gosporty_android_project.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.widget.Button
-import com.example.gosporty_android_project.R
-import com.example.gosporty_android_project.R.layout.activity_home
-import com.example.gosporty_android_project.R.layout.field
 import com.example.gosporty_android_project.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

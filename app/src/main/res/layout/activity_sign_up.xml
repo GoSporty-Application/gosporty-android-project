@@ -136,13 +136,13 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/suOpenIB"
+        app:layout_constraintBottom_toTopOf="@+id/suFacebookIB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/suOpenIB"
+        android:id="@+id/suFacebookIB"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="27dp"
@@ -151,19 +151,19 @@
         app:layout_constraintBottom_toTopOf="@+id/suSaveBTN"
         app:layout_constraintEnd_toStartOf="@+id/suSmsIB"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toEndOf="@+id/suBackIB"
+        app:layout_constraintStart_toEndOf="@+id/suGoogleIB"
         app:srcCompat="@drawable/mui_facebook" />
 
     <ImageButton
-        android:id="@+id/suBackIB"
+        android:id="@+id/suGoogleIB"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="45dp"
         android:background="@color/white"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/suOpenIB"
+        app:layout_constraintBottom_toBottomOf="@+id/suFacebookIB"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/suOpenIB"
+        app:layout_constraintTop_toTopOf="@+id/suFacebookIB"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/mui_google" />
 
@@ -173,9 +173,9 @@
         android:layout_height="48dp"
         android:background="@color/white"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/suOpenIB"
+        app:layout_constraintBottom_toBottomOf="@+id/suFacebookIB"
         app:layout_constraintEnd_toEndOf="@+id/suSaveBTN"
-        app:layout_constraintTop_toTopOf="@+id/suOpenIB"
+        app:layout_constraintTop_toTopOf="@+id/suFacebookIB"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/mui_sms" />
 

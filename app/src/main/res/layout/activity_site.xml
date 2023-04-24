@@ -23,20 +23,6 @@
         tools:layout_conversion_absoluteWidth="48dp" />
 
     <ImageButton
-        android:id="@+id/sBookingsIB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/blue"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/vector_lista"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="48dp" />
-
-    <ImageButton
         android:id="@+id/sHomeIB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,8 +30,8 @@
         android:background="@drawable/blue"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sProfileIB"
-        app:layout_constraintStart_toEndOf="@+id/sBookingsIB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo_circulo"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="48dp" />
@@ -340,5 +326,15 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/sSiteInfoTV"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <ImageButton
+        android:id="@+id/sBookingsIB"
+        android:layout_width="68dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/vector_lista"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

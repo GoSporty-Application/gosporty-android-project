@@ -7,35 +7,21 @@
     tools:context=".view.MainActivity">
 
     <ImageButton
-        android:id="@+id/epHomeIB2"
+        android:id="@+id/epHomeIB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:background="@drawable/blue"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/epProfileIB2"
-        app:layout_constraintStart_toEndOf="@+id/epBookingsIB2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo_circulo"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="48dp" />
 
     <ImageButton
-        android:id="@+id/epBookingsIB2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/blue"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/vector_lista"
-        tools:layout_conversion_absoluteHeight="48dp"
-        tools:layout_conversion_absoluteWidth="48dp" />
-
-    <ImageButton
-        android:id="@+id/epProfileIB2"
+        android:id="@+id/epProfileIB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
@@ -250,5 +236,15 @@
         tools:layout_editor_absoluteX="51dp"
         tools:layout_editor_absoluteY="67dp"
         tools:srcCompat="@drawable/circular_basic" />
+
+    <ImageButton
+        android:id="@+id/epBookingsIB"
+        android:layout_width="75dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vector_lista" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
