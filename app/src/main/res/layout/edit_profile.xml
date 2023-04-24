@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <ImageButton
         android:id="@+id/epHomeIB2"
@@ -168,7 +168,7 @@
         android:layout_marginBottom="144dp"
         android:background="@drawable/bg_button_green"
         android:elevation="5dp"
-        android:fontFamily="@font/poppins_medium"
+        android:fontFamily="@font/montserrat"
         android:text="Guardar"
         android:textAllCaps="false"
         android:textColor="@color/white"
