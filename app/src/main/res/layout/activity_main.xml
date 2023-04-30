@@ -33,7 +33,7 @@
         android:scaleX="1.2"/>
 
     <EditText
-        android:id="@+id/liNameET"
+        android:id="@+id/liUsernameET"
         android:layout_width="280dp"
         android:layout_height="48dp"
         android:layout_marginTop="60dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/liUsernameET"
+        android:id="@+id/liPasswordET"
         android:layout_width="280dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -66,10 +66,10 @@
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/liNameET"
+        app:layout_constraintEnd_toEndOf="@+id/liUsernameET"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/liNameET"
-        app:layout_constraintTop_toBottomOf="@+id/liNameET" />
+        app:layout_constraintStart_toStartOf="@+id/liUsernameET"
+        app:layout_constraintTop_toBottomOf="@+id/liUsernameET" />
 
     <CheckBox
         android:id="@+id/liRememberCB"
@@ -83,10 +83,10 @@
         android:layoutDirection="rtl"
         android:text="Recuerdame"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/liUsernameET"
+        app:layout_constraintEnd_toEndOf="@+id/liPasswordET"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/liUsernameET"
-        app:layout_constraintTop_toBottomOf="@+id/liUsernameET" />
+        app:layout_constraintStart_toStartOf="@+id/liPasswordET"
+        app:layout_constraintTop_toBottomOf="@+id/liPasswordET" />
 
     <Button
         android:id="@+id/liLoginBTN"
