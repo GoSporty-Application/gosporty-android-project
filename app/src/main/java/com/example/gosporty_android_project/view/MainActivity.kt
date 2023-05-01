@@ -58,5 +58,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.liGoogleIB.setOnClickListener{
+
+        }
+
     }
 }

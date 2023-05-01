@@ -28,15 +28,15 @@
             android:src="@drawable/photo_profile" />
 
         <TextView
-            android:id="@+id/pNameUserTV"
+            android:id="@+id/pNameTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@id/pPhotoProfileIV"
             android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginTop="80dp"
+            android:layout_toEndOf="@id/pPhotoProfileIV"
             android:fontFamily="@font/roboto"
-            android:text="Andres Castro"
+            android:text="Cargando..."
             android:textColor="#FFFFFF"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -45,10 +45,10 @@
             android:id="@+id/pUsernameTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/pNameUserTV"
+            android:layout_below="@id/pNameTV"
             android:layout_toEndOf="@id/pPhotoProfileIV"
             android:fontFamily="@font/roboto"
-            android:text=".@castrofut"
+            android:text="¡Nos tomara un momento!"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
         <LinearLayout
