@@ -1,6 +1,7 @@
 package com.example.gosporty_android_project.view.viewmodels
 
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -22,24 +23,34 @@ class UserViewModel: ViewModel() {
 
     fun getLoginEmail(username:String) {
         viewModelScope.launch(Dispatchers.IO){
-            val res = Firebase.firestore.collection("usuarios").whereEqualTo(
-                "username",
-                username
-            ).get().await().documents.get(0).get("correo").toString()
-            withContext(Dispatchers.Main){
-                _email.value = res
+            try{
+                val res = Firebase.firestore.collection("usuarios").whereEqualTo(
+                    "username",
+                    username
+                ).get().await().documents.get(0).get("correo").toString()
+                withContext(Dispatchers.Main){
+                    _email.value = res
+                }
+            } catch (e:Exception) {
+                withContext(Dispatchers.Main){
+                    _email.value = "ERROR"
+                }
             }
         }
     }
 
     fun getUser(){
         viewModelScope.launch(Dispatchers.IO) {
-            val res = Firebase.firestore.collection("usuarios").document(
-                Firebase.auth.currentUser!!.uid
-            ).get().await()
-            val me = res.toObject(User::class.java)
-            withContext(Dispatchers.Main) {
-                _user.value = me!!
+            try{
+                val res = Firebase.firestore.collection("usuarios").document(
+                    Firebase.auth.currentUser!!.uid
+                ).get().await()
+                val me = res.toObject(User::class.java)
+                withContext(Dispatchers.Main) {
+                    _user.value = me!!
+                }
+            }catch(e:Exception){
+                e.printStackTrace()
             }
         }
     }

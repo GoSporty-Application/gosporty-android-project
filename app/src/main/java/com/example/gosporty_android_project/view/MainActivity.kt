@@ -41,10 +41,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         userViewModel.email.observe(this){
-            authViewModel.logIn(
-                it,
-                binding.liPasswordET.text.toString()
-            )
+            when(it){
+                "ERROR"->{
+                    Toast.makeText(this,"Hubo un error",Toast.LENGTH_SHORT).show()
+                }
+                else->{
+                    authViewModel.logIn(
+                        it,
+                        binding.liPasswordET.text.toString()
+                    )
+                }
+            }
         }
 
         binding.liLoginBTN.setOnClickListener {
