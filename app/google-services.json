@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1034639644752",
+    "project_id": "gosporty-android-project",
+    "storage_bucket": "gosporty-android-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034639644752:android:879e256fe1864afc1e1955",
+        "android_client_info": {
+          "package_name": "com.example.gosporty_android_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034639644752-r4aa4u2b6gm863gg2ei06sp9rroeldku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD90h4T-ATpwXyR5-8YijCzgbDNKBrw6Hk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034639644752-r4aa4u2b6gm863gg2ei06sp9rroeldku.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
