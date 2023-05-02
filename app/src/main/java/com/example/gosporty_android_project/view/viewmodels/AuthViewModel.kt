@@ -51,12 +51,12 @@ class AuthViewModel:ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 var response = Firebase.auth.createUserWithEmailAndPassword(
-                    user.correo,
+                    user.email,
                     password
                 ).await()
                 user.id = response.user!!.uid
                 Firebase.firestore
-                    .collection("usuarios")
+                    .collection("users")
                     .document(user.id!!)
                     .set(user).await()
                 withContext(Dispatchers.Main) {
