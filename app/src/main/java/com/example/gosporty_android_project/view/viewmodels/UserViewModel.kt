@@ -24,10 +24,10 @@ class UserViewModel: ViewModel() {
     fun getLoginEmail(username:String) {
         viewModelScope.launch(Dispatchers.IO){
             try{
-                val res = Firebase.firestore.collection("usuarios").whereEqualTo(
+                val res = Firebase.firestore.collection("users").whereEqualTo(
                     "username",
                     username
-                ).get().await().documents.get(0).get("correo").toString()
+                ).get().await().documents.get(0).get("email").toString()
                 withContext(Dispatchers.Main){
                     _email.value = res
                 }
@@ -42,7 +42,7 @@ class UserViewModel: ViewModel() {
     fun getUser(){
         viewModelScope.launch(Dispatchers.IO) {
             try{
-                val res = Firebase.firestore.collection("usuarios").document(
+                val res = Firebase.firestore.collection("users").document(
                     Firebase.auth.currentUser!!.uid
                 ).get().await()
                 val me = res.toObject(User::class.java)

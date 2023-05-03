@@ -44,7 +44,7 @@ class SignUpActivity : AppCompatActivity() {
             val username = binding.suUsernameET.text.toString()
             val email = binding.suEmailET.text.toString()
             val password = binding.suPasswordET.text.toString()
-            val user = User(null,email,name,username)
+            val user = User(null,username,name,email)
             viewmodel.signUp(user,password)
         }
     }
