@@ -54,13 +54,13 @@ class HomeActivity : AppCompatActivity() {
 
         authViewModel.getAuthStatus()
 
-        binding.buttonHome.setOnClickListener{
+        binding.hHomeBTN.setOnClickListener{
             showFragment(home)
         }
-        binding.buttonBooking.setOnClickListener{
+        binding.hMenuBTN.setOnClickListener{
             showFragment(booking)
         }
-        binding.buttonProfile.setOnClickListener{
+        binding.hProfileBTN.setOnClickListener{
             showFragment(profile)
         }
     }
