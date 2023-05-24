@@ -38,7 +38,7 @@ class AuthViewModel:ViewModel() {
                     status.value = AuthState.AUTHENTICATED
                 }
             } catch (e:Exception) {
-                e.printStackTrace()
+                Log.d("AuthViewModel", "logIn: ${e.message}")
                 withContext(Dispatchers.Main) {
                     status.value = AuthState.ERROR
                 }

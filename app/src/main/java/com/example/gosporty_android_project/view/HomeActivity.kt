@@ -1,6 +1,7 @@
 package com.example.gosporty_android_project.view
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +15,7 @@ import com.example.gosporty_android_project.view.fragments.HomeFragment
 import com.example.gosporty_android_project.view.fragments.ProfileFragment
 import com.example.gosporty_android_project.view.viewmodels.AuthState
 import com.example.gosporty_android_project.view.viewmodels.AuthViewModel
+import com.example.gosporty_android_project.view.viewmodels.UserViewModel
 
 class HomeActivity : AppCompatActivity() {
 
@@ -25,6 +27,7 @@ class HomeActivity : AppCompatActivity() {
     private val booking = BookingFragment.newInstance()
     private val profile = ProfileFragment.newInstance()
     private val authViewModel: AuthViewModel by viewModels()
+    private val userViewModel: UserViewModel by viewModels()
 
     @Override
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +44,7 @@ class HomeActivity : AppCompatActivity() {
                     finish()
                 }
                 AuthState.AUTHENTICATED->{
-                    //Todo: Authenticated flow
+
                 }
                 AuthState.LOADING->{
                     Toast.makeText(this,"Cargando...",Toast.LENGTH_SHORT).show()
@@ -64,5 +67,9 @@ class HomeActivity : AppCompatActivity() {
 
     private fun showFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().replace(R.id.fragmentHomeContainer, fragment).commit()
+    }
+
+    fun saveUser(){
+        val sp = getSharedPreferences("user", MODE_PRIVATE);
     }
 }

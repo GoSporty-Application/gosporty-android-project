@@ -1,10 +1,11 @@
 package com.example.gosporty_android_project.view.viewmodels
 
+import android.app.Application
+import android.content.Context
+import android.content.SharedPreferences
 import android.util.Log
-import android.widget.Toast
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
+import com.example.gosporty_android_project.view.PrefRepository
 import com.example.gosporty_android_project.view.models.User
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -13,13 +14,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
-
-class UserViewModel: ViewModel() {
+class UserViewModel(): ViewModel() {
 
     private val _user: MutableLiveData<User> = MutableLiveData()
     val user: MutableLiveData<User> = _user
     private val _email: MutableLiveData<String> = MutableLiveData()
     val email: MutableLiveData<String> = _email
+
 
     fun getLoginEmail(username:String) {
         viewModelScope.launch(Dispatchers.IO){
@@ -32,6 +33,7 @@ class UserViewModel: ViewModel() {
                     _email.value = res
                 }
             } catch (e:Exception) {
+                Log.d("UserViewModel", "getLoginEmail: ${e.message}")
                 withContext(Dispatchers.Main){
                     _email.value = "ERROR"
                 }
@@ -54,5 +56,4 @@ class UserViewModel: ViewModel() {
             }
         }
     }
-
 }
