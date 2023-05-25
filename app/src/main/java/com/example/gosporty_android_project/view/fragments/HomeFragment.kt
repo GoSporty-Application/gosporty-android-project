@@ -12,6 +12,7 @@ import com.example.gosporty_android_project.databinding.HomeFragmentBinding
 import com.example.gosporty_android_project.view.FieldActivity
 import com.example.gosporty_android_project.view.HomeActivity
 import com.example.gosporty_android_project.view.MapActivity
+import com.example.gosporty_android_project.view.PermissionsActivity
 import com.example.gosporty_android_project.view.adapters.AdvertiseAdapter
 
 class HomeFragment : Fragment(){
@@ -36,7 +37,7 @@ class HomeFragment : Fragment(){
          */
 
         binding.hfMapBTN.setOnClickListener {
-            val intent: Intent = Intent(this.context, MapActivity::class.java)
+            val intent: Intent = Intent(this.context, PermissionsActivity::class.java)
             startActivity(intent)
         }
 
