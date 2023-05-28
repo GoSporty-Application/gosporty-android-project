@@ -16,7 +16,6 @@ import kotlin.math.log
 
 class ProfileFragment : Fragment() {
 
-    val userViewModel: UserViewModel by viewModels()
     val prefRepository: PrefRepository by lazy {
         PrefRepository(requireContext())
     }

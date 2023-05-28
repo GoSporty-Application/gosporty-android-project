@@ -19,6 +19,7 @@ class PrefRepository(val context: Context) {
         const val USER_PHOTO_URL = "USER_PHOTO_URL"
         const val USER_CELLPHONE = "USER_CELLPHONE"
         const val ESTABLISHMENT_ID = "ESTABLISHMENT_ID"
+        const val ESTABLISHMENT_ADDRESS = "ESTABLISHMENT_ADDRESS"
         const val ESTABLISHMENT_JOURNEY = "ESTABLISHMENT_JOURNEY"
         const val ESTABLISHMENT_LAT = "ESTABLISHMENT_LAT"
         const val ESTABLISHMENT_LOGO = "ESTABLISHMENT_LOGO"
@@ -63,6 +64,7 @@ class PrefRepository(val context: Context) {
     fun setEstablishment(establishment: Establishment){
         val editor = establishmentPref.edit()
         ESTABLISHMENT_ID.put(establishment.id!!, editor)
+        ESTABLISHMENT_ADDRESS.put(establishment.address, editor)
         ESTABLISHMENT_JOURNEY.put(establishment.journey, editor)
         ESTABLISHMENT_LAT.put(establishment.lat, editor)
         ESTABLISHMENT_LOGO.put(establishment.logo, editor)
@@ -76,6 +78,7 @@ class PrefRepository(val context: Context) {
         val pref = establishmentPref
         return Establishment(
             ESTABLISHMENT_ID.getString(pref),
+            ESTABLISHMENT_ADDRESS.getString(pref),
             ESTABLISHMENT_JOURNEY.getString(pref),
             ESTABLISHMENT_LAT.getDouble(pref),
             ESTABLISHMENT_LOGO.getString(pref),

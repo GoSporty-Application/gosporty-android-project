@@ -16,6 +16,8 @@ class EstablishmentViewModel(): ViewModel() {
 
     private val _establishments: MutableLiveData<List<Establishment>> = MutableLiveData()
     val establishments: MutableLiveData<List<Establishment>> = _establishments
+    private val _establishment: MutableLiveData<Establishment> = MutableLiveData()
+    val establishment: MutableLiveData<Establishment> = _establishment
 
     fun getEstablishments() {
         viewModelScope.launch(Dispatchers.IO) {
@@ -31,4 +33,19 @@ class EstablishmentViewModel(): ViewModel() {
         }
     }
 
+    fun getEstablishment(id: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                val res = Firebase.firestore.collection("establishments").document(
+                    id
+                ).get().await()
+                val est = res.toObject(Establishment::class.java)
+                withContext(Dispatchers.Main) {
+                    _establishment.value = est!!
+                }
+            } catch (e: Exception) {
+                Log.d("EstablishmentViewModel", "getEstablishments: ${e.message}")
+            }
+        }
+    }
 }

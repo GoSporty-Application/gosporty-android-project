@@ -1,6 +1,7 @@
 package com.example.gosporty_android_project.view
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -74,8 +75,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, OnMapsSdkInitialize
 
     override fun onInfoWindowClick(marker: Marker) {
         val id = marker.tag
-        Toast.makeText(this, "${id}", Toast.LENGTH_SHORT).show()
-        //TODO:("Cambiar a la vista de establecimiento recuperando la información haciendo uso del ID guardado en el tag del marker")
+        val intent = Intent(this, SiteActivity::class.java)
+        intent.putExtra("establishmentId", id.toString())
+        startActivity(intent)
     }
 
     @SuppressLint("MissingPermission")
