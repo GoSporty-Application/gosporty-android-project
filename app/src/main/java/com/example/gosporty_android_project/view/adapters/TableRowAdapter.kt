@@ -35,7 +35,7 @@ class TableRowAdapter : RecyclerView.Adapter<TableRowViewHolder>() {
             when(rows[position].button){
                 "arrow" -> {
                     var intent = Intent(holder.context, FieldActivity::class.java)
-                    intent.putExtra("field", rows[position].id)
+                    intent.putExtra("fieldId", rows[position].id)
                     holder.context.startActivity(intent)
                 }
                 "disabled" -> {

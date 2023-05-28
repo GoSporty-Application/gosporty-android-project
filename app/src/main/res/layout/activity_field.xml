@@ -20,23 +20,13 @@
         app:srcCompat="@drawable/bg_balonfutbol2"
         tools:srcCompat="@drawable/bg_balonfutbol2" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="416dp"
-        android:layout_height="73dp"
-        android:alpha="0.5"
-        android:background="#838383"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/divider_horizontal_dark" />
-
     <TextView
         android:id="@+id/fSiteNameTV"
         android:layout_width="218dp"
         android:layout_height="45dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/bg_button_yellow"
+        android:elevation="20dp"
         android:text="Camp Nou"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -47,155 +37,110 @@
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/fHeaderTV"
-        android:layout_width="360dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/bg_button_yellow"
-        android:text="Horario                Disponibilidad"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fInfoFieldTV" />
-
-    <ScrollView
-        android:id="@+id/fListScrollableSV"
-        android:layout_width="362dp"
-        android:layout_height="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fHeaderTV">
-
-        <LinearLayout
-            android:id="@+id/fListVerticalLL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_button_blue"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/fListHorizontalLL1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:id="@+id/fHourTV1"
-                    android:layout_width="300dp"
-                    android:layout_height="match_parent"
-                    android:text="   16:00 - 17:00"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    tools:layout_conversion_absoluteHeight="19dp"
-                    tools:layout_conversion_absoluteWidth="257dp"
-                    tools:layout_editor_absoluteX="25dp"
-                    tools:layout_editor_absoluteY="497dp" />
-
-                <ImageButton
-                    android:id="@+id/fOpenIB"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/blue"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/check"
-                    tools:layout_conversion_absoluteHeight="48dp"
-                    tools:layout_conversion_absoluteWidth="48dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/fListHorizontalLL2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:id="@+id/fHourTV2"
-                    android:layout_width="300dp"
-                    android:layout_height="match_parent"
-                    android:text="   17:00 - 18:00"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    tools:layout_conversion_absoluteHeight="19dp"
-                    tools:layout_conversion_absoluteWidth="257dp"
-                    tools:layout_editor_absoluteX="25dp"
-                    tools:layout_editor_absoluteY="497dp" />
-
-                <ImageButton
-                    android:id="@+id/fBookedB"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/blue"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/booked"
-                    tools:layout_conversion_absoluteHeight="48dp"
-                    tools:layout_conversion_absoluteWidth="48dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/fListHorizontalLL3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:id="@+id/fHourTV3"
-                    android:layout_width="300dp"
-                    android:layout_height="match_parent"
-                    android:text="   18:00 - 19:00"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    tools:layout_conversion_absoluteHeight="19dp"
-                    tools:layout_conversion_absoluteWidth="257dp"
-                    tools:layout_editor_absoluteX="25dp"
-                    tools:layout_editor_absoluteY="497dp" />
-
-                <ImageButton
-                    android:id="@+id/fBookedByOtherIB"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/blue"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/booked_by_other"
-                    tools:layout_conversion_absoluteHeight="48dp"
-                    tools:layout_conversion_absoluteWidth="48dp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
-
-    <TextView
-        android:id="@+id/fInfoFieldTV"
-        android:layout_width="359dp"
-        android:layout_height="111dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="219dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/et_style"
-        android:elevation="10dp"
-        android:shadowDx="3"
-        android:shadowDy="2"
-        android:shadowRadius="1.8"
-        android:text="   Camp Nou canchas sintéticas"
-        android:textAlignment="viewStart"
+        android:id="@+id/fFieldNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:text="Cancha 3 - Futbol 7"
         android:textColor="#000000"
         android:textSize="16sp"
-        android:visibility="visible"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fSiteNameTV"
+        app:layout_constraintEnd_toEndOf="@+id/fSiteNameTV"
+        app:layout_constraintStart_toStartOf="@+id/fSiteNameTV" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="190dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fSiteNameTV"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toBottomOf="@+id/fSiteNameTV">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/fSiteNameCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/montserrat"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elevation="51dp"
+                android:text="Dirección: "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/fSiteNameCardTV"
+                app:layout_constraintTop_toBottomOf="@+id/fSiteNameCardTV" />
+
+            <TextView
+                android:id="@+id/fAddressCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:elevation="51dp"
+                android:text="Carrera 54 # 25 - 17"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/fDescriptionCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elevation="51dp"
+                android:text="Cancha futbol 7"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/fAddressCardTV"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/fGradeCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elevation="51dp"
+                android:text="4,7"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                app:layout_constraintStart_toStartOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="59dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:elevation="51dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/vector_estrella" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/fSiteLogoIV"
@@ -204,6 +149,10 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:alpha="1"
+        android:background="@drawable/bg_circular_button_blue_dark"
+        android:elevation="20dp"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_campnou"
@@ -216,87 +165,21 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/bg_circular_button_green"
+        android:elevation="20dp"
+        android:padding="5dp"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vector"
-        tools:srcCompat="@drawable/bg_circular_button_green" />
+        tools:srcCompat="@drawable/vector" />
 
-    <TextView
-        android:id="@+id/fIdFieldTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cancha 3 - Futbol 7"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/fSiteNameTV"
-        app:layout_constraintEnd_toEndOf="@+id/fSiteNameTV"
-        app:layout_constraintStart_toStartOf="@+id/fSiteNameTV" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="59dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="20dp"
-        android:elevation="51dp"
-        app:layout_constraintEnd_toEndOf="@+id/fInfoFieldTV"
-        app:layout_constraintTop_toTopOf="@+id/fInfoFieldTV"
-        app:srcCompat="@drawable/vector_estrella" />
-
-    <TextView
-        android:id="@+id/fAddressTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="26dp"
-        android:elevation="51dp"
-        android:text="Carrera 54 # 25 - 17"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/fInfoFieldTV" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="26dp"
-        android:elevation="51dp"
-        android:text="Dirección: "
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/fInfoFieldTV"
-        app:layout_constraintTop_toTopOf="@+id/fInfoFieldTV" />
-
-    <TextView
-        android:id="@+id/fDescriptionTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="1dp"
-        android:elevation="51dp"
-        android:text="Cancha futbol 7"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/fInfoFieldTV"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/fGradeTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="40dp"
-        android:elevation="51dp"
-        android:text="4,7"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/fInfoFieldTV"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:alpha="0.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

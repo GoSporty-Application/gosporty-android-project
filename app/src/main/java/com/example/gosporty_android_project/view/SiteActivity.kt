@@ -1,14 +1,10 @@
 package com.example.gosporty_android_project.view
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gosporty_android_project.databinding.ActivitySiteBinding
-import com.example.gosporty_android_project.view.adapters.AdvertiseAdapter
 import com.example.gosporty_android_project.view.adapters.TableRowAdapter
 import com.example.gosporty_android_project.view.models.TableRow
 import com.example.gosporty_android_project.view.viewmodels.EstablishmentViewModel
@@ -57,7 +53,7 @@ class SiteActivity : AppCompatActivity() {
 
         establishmentViewModel.getEstablishment(text!!)
 
-        fieldViewModel.getEstablishments(prefRepository.getEstablishment().id!!)
+        fieldViewModel.getFields(prefRepository.getEstablishment().id!!)
 
         binding.sBackIB.setOnClickListener {
             finish()
