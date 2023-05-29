@@ -16,9 +16,7 @@ class ConfirmationActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.capBackIB.setOnClickListener {
-            startActivity(
-                Intent(this, HomeActivity::class.java)
-            )
+            finish()
         }
 
         binding.capSiteLogoIV.setOnClickListener {
@@ -28,9 +26,7 @@ class ConfirmationActivity : AppCompatActivity() {
         }
 
         binding.capSubmitBTN.setOnClickListener {
-            startActivity(
-                Intent(this, HomeActivity::class.java)
-            )
+            finish()
         }
     }
 }

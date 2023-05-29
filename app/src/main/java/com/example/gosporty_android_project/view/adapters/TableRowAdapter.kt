@@ -30,6 +30,14 @@ class TableRowAdapter : RecyclerView.Adapter<TableRowViewHolder>() {
                 holder.buttonIB.isEnabled = false
                 holder.buttonIB.setImageResource(R.drawable.booked_by_other)
             }
+            "book" -> {
+                holder.buttonIB.isEnabled = true
+                holder.buttonIB.setImageResource(R.drawable.check)
+            }
+            "unbook" -> {
+                holder.buttonIB.isEnabled = true
+                holder.buttonIB.setImageResource(R.drawable.booked)
+            }
         }
         holder.buttonIB.setOnClickListener{
             when(rows[position].button){
@@ -42,10 +50,12 @@ class TableRowAdapter : RecyclerView.Adapter<TableRowViewHolder>() {
                     Toast.makeText(holder.context, "This field is already booked", Toast.LENGTH_SHORT).show()
                 }
                 "book" -> {
-                    Toast.makeText(holder.context, "Booked", Toast.LENGTH_SHORT).show()
+                    rows[position].button = "unbook"
+                    notifyDataSetChanged()
                 }
                 "unbook" -> {
-                    Toast.makeText(holder.context, "Unbooked", Toast.LENGTH_SHORT).show()
+                    rows[position].button = "book"
+                    notifyDataSetChanged()
                 }
             }
         }
@@ -57,6 +67,29 @@ class TableRowAdapter : RecyclerView.Adapter<TableRowViewHolder>() {
 
     fun addRow(tableRow: TableRow) {
         rows.add(tableRow)
+        notifyDataSetChanged()
+    }
+
+    fun getReservations(): ArrayList<TableRow> {
+        var reservations: ArrayList<TableRow> = arrayListOf()
+        for (row in rows){
+            if (row.button == "book"){
+                reservations.add(row)
+            }
+        }
+        return reservations
+    }
+
+    fun fromIntToRow(reservations: List<Int>){
+        var newRows = arrayListOf<TableRow>()
+        for (row in 0..23){
+            if (reservations.contains(row)){
+                newRows.add(TableRow("", "${row}:00 - ${row+1}:00", "", "book"))
+            } else {
+                newRows.add(TableRow("", "${row}:00 - ${row+1}:00", "", "disabled"))
+            }
+        }
+        rows = newRows
         notifyDataSetChanged()
     }
 }

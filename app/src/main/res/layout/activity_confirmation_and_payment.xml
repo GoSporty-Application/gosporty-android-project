@@ -180,6 +180,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="47dp"
         android:layout_marginTop="7dp"
+        android:enabled="false"
         android:text="Pagar en línea"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -197,6 +198,7 @@
             android:id="@+id/capCreditDebitRB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:text="Crédito / débito"
             android:textStyle="bold" />
 
@@ -204,6 +206,7 @@
             android:id="@+id/capTransferRB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:text="Transferencia"
             android:textStyle="bold" />
     </RadioGroup>
@@ -213,6 +216,7 @@
         android:layout_width="135dp"
         android:layout_height="32dp"
         android:layout_marginStart="47dp"
+        android:checked="true"
         android:text="Pagar en sitio"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
