@@ -17,12 +17,13 @@ class ReservationViewModel: ViewModel() {
     private val _reservations: MutableLiveData<List<Reservation>> = MutableLiveData()
     val reservations: MutableLiveData<List<Reservation>> = _reservations
 
-    fun getSchedules(idEstablishment: String, idField: String){
+    fun getSchedules(idEstablishment: String, idField: String, day:Int, month:Int, year:Int) {
         viewModelScope.launch(Dispatchers.IO){
             try {
                 val res = Firebase.firestore.collection("establishments").document(
                     idEstablishment
-                ).collection("fields").document(idField).collection("reservations").get().await()
+                ).collection("fields").document(idField).collection("reservations").
+                    whereEqualTo("day",day).whereEqualTo("month",month).whereEqualTo("year",year).get().await()
                 val reservations = res.toObjects(Reservation::class.java)
                 withContext(Dispatchers.Main){
                     _reservations.value = reservations

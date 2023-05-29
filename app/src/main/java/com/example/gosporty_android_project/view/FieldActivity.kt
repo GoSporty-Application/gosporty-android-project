@@ -35,8 +35,6 @@ class FieldActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        initReservations()
-
         adapter = TableRowAdapter()
         binding.fRowsRV.adapter = adapter
         binding.fRowsRV.layoutManager = LinearLayoutManager(this)
@@ -71,18 +69,20 @@ class FieldActivity : AppCompatActivity() {
 
         reservationViewModel.reservations.observe(this) {
             Log.d("SCHEDULES", it.toString())
+            initReservations()
             removeReservated(it)
             adapter.fromIntToRow(reservations)
         }
 
         var id = intent.getStringExtra("fieldId")
         fieldViewModel.getField(id!!)
-        reservationViewModel.getSchedules(prefRepository.getEstablishment().id!!,id!!)
     }
 
     fun initDatePicker(){
         val dateSetListener = DatePickerDialog.OnDateSetListener() { view: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
             binding.fDateBTN.text = "$dayOfMonth/${month+1}/$year"
+            var id = intent.getStringExtra("fieldId")
+            reservationViewModel.getSchedules(prefRepository.getEstablishment().id!!,id!!,dayOfMonth,month+1,year)
         }
 
         var calendar = Calendar.getInstance()
@@ -94,6 +94,7 @@ class FieldActivity : AppCompatActivity() {
     }
 
     fun initReservations(){
+        reservations.clear()
         for (reservation in 0..23){
             reservations.add(reservation)
         }
