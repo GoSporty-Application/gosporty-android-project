@@ -26,6 +26,10 @@ class FieldActivity : AppCompatActivity() {
     private lateinit var adapter: TableRowAdapter
     private lateinit var datePickerDialog : DatePickerDialog
     private var reservations = arrayListOf<Int>()
+    private var day : Int = 0
+    private var month : Int = 0
+    private var year : Int = 0
+    private var fieldId : String = ""
 
     val binding by lazy {
         ActivityFieldBinding.inflate(layoutInflater)
@@ -50,11 +54,14 @@ class FieldActivity : AppCompatActivity() {
         }
 
         binding.fReserveBTN.setOnClickListener {
-            //val reservations = adapter.getReservations()
             val intent = Intent(this, ConfirmationActivity::class.java)
-            intent.putExtra("fieldId", intent.getStringExtra("fieldId"))
-            intent.putExtra("reservations", reservations)
+            intent.putExtra("fieldId", fieldId)
+            intent.putExtra("reservations", adapter.getReservations())
+            intent.putExtra("day", day)
+            intent.putExtra("month", month)
+            intent.putExtra("year", year)
             startActivity(intent)
+            finish()
         }
 
         fieldViewModel.field.observe(this) {
@@ -74,12 +81,15 @@ class FieldActivity : AppCompatActivity() {
             adapter.fromIntToRow(reservations)
         }
 
-        var id = intent.getStringExtra("fieldId")
-        fieldViewModel.getField(id!!)
+        fieldId = intent.getStringExtra("fieldId")!!
+        fieldViewModel.getField(fieldId)
     }
 
     fun initDatePicker(){
         val dateSetListener = DatePickerDialog.OnDateSetListener() { view: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
+            this.day = dayOfMonth
+            this.month = month+1
+            this.year = year
             binding.fDateBTN.text = "$dayOfMonth/${month+1}/$year"
             var id = intent.getStringExtra("fieldId")
             reservationViewModel.getSchedules(prefRepository.getEstablishment().id!!,id!!,dayOfMonth,month+1,year)

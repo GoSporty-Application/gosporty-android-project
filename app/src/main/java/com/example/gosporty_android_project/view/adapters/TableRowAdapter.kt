@@ -70,11 +70,14 @@ class TableRowAdapter : RecyclerView.Adapter<TableRowViewHolder>() {
         notifyDataSetChanged()
     }
 
-    fun getReservations(): ArrayList<TableRow> {
-        var reservations: ArrayList<TableRow> = arrayListOf()
+    fun getReservations(): ArrayList<Int> {
+        var reservations: ArrayList<Int> = arrayListOf()
         for (row in rows){
-            if (row.button == "book"){
-                reservations.add(row)
+            if (row.button == "unbook"){
+                var initSplit = row.principal.split("-")[0]
+                initSplit.trim()
+                var init = initSplit.split(":")[0]
+                reservations.add(init.toInt())
             }
         }
         return reservations
