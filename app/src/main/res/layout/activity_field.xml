@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteY="-87dp">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/sSitePhotoIV"
         android:layout_width="412dp"
         android:layout_height="318dp"
         android:scaleType="centerCrop"
@@ -34,7 +34,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/fSiteLogoIV"
         app:layout_constraintStart_toEndOf="@+id/fBackIB"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/sSitePhotoIV" />
 
     <TextView
         android:id="@+id/fFieldNameTV"
@@ -181,7 +181,7 @@
         android:alpha="0.6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/sSitePhotoIV" />
 
     <TableRow
         android:id="@+id/tableRow2"

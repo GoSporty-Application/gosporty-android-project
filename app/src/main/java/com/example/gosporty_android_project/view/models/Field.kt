@@ -5,4 +5,5 @@ data class Field(
     val available: Boolean = false,
     val name: String = "",
     val size: String = "",
+    val photo: String = ""
 )

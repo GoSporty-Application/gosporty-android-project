@@ -7,7 +7,7 @@
     tools:context=".view.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/sSitePhotoIV"
         android:layout_width="0dp"
         android:layout_height="420dp"
         android:alpha="0.5"
@@ -26,8 +26,8 @@
         android:alpha="1"
         android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/sSitePhotoIV"
+        app:layout_constraintTop_toTopOf="@+id/sSitePhotoIV"
         android:src="@drawable/logo_gosporty"
         android:scaleY="1.2"
         android:scaleX="1.2"/>
@@ -50,7 +50,7 @@
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/sSitePhotoIV"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
@@ -103,7 +103,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/sSitePhotoIV" />
 
     <TextView
         android:id="@+id/textView2"

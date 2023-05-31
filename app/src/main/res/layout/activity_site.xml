@@ -25,7 +25,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/sSiteLogoIV"
         app:layout_constraintStart_toEndOf="@+id/sBackIB"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/sSitePhotoIV" />
 
     <ImageView
         android:id="@+id/sSiteLogoIV"
@@ -56,7 +56,7 @@
         tools:srcCompat="@drawable/vector" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/sSitePhotoIV"
         android:layout_width="412dp"
         android:layout_height="318dp"
         android:scaleType="centerCrop"
@@ -84,7 +84,7 @@
         app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/sSitePhotoIV">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

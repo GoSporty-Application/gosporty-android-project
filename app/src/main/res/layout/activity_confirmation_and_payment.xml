@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/sSitePhotoIV"
         android:layout_width="412dp"
         android:layout_height="291dp"
         android:scaleType="centerCrop"
@@ -73,7 +73,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/capSiteLogoIV"
         app:layout_constraintStart_toEndOf="@+id/capBackIB"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/sSitePhotoIV" />
 
     <TextView
         android:id="@+id/textView15"
