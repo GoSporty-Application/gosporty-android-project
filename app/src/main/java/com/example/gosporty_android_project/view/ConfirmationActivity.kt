@@ -2,6 +2,7 @@ package com.example.gosporty_android_project.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -42,7 +43,7 @@ class ConfirmationActivity : AppCompatActivity() {
         binding.capSubmitBTN.setOnClickListener {
             val establishment = prefRepository.getEstablishment()
             val user = prefRepository.getUser()
-            val reserve = Reservation(null, start, end, day, month, year, user.id!!)
+            val reserve = Reservation(null, establishment.id!!, fieldId, start, end, day, month, year, user.id!!)
             fieldViewModel.reserve(fieldId,establishment.id!!, reserve)
         }
 

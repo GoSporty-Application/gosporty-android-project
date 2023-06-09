@@ -34,4 +34,26 @@ class ReservationViewModel: ViewModel() {
             }
         }
     }
+
+    fun getSchedulesByUser(idUser: String) {
+        viewModelScope.launch(Dispatchers.IO){
+            try {
+                val res = Firebase.firestore.collectionGroup("reservations").get().await()
+                val reservations = res.toObjects(Reservation::class.java)
+                val filtered = arrayListOf<Reservation>()
+                for (reservation in reservations){
+                    if(reservation.owner.equals(idUser)){
+                        filtered.add(reservation)
+                    }
+                }
+                withContext(Dispatchers.Main){
+                    _reservations.value = filtered
+                }
+                Log.d("ScheduleViewModel", "user: ${idUser}")
+            } catch (e: Exception) {
+                Log.d("ScheduleViewModel", "getSchedules: ${e.message}")
+            }
+        }
+    }
+
 }
