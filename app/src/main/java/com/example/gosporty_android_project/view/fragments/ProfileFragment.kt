@@ -8,10 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.bumptech.glide.Glide
 import com.example.gosporty_android_project.databinding.ProfileFragmentBinding
 import com.example.gosporty_android_project.view.EditProfileActivity
 import com.example.gosporty_android_project.view.PrefRepository
 import com.example.gosporty_android_project.view.viewmodels.UserViewModel
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import kotlin.math.log
 
 class ProfileFragment : Fragment() {
@@ -33,7 +36,11 @@ class ProfileFragment : Fragment() {
         binding.pCityTV.text = user.location
         binding.pCellphoneTV.text = user.cellphone
         binding.pSportTV.text = user.favSport
-
+        if(user.photoUrl!=""){
+            Firebase.storage.getReference().child("users").child(user.id!!).child(user.photoUrl).downloadUrl.addOnSuccessListener {
+                Glide.with(binding.pPhotoProfileIV).load(it).into(binding.pPhotoProfileIV)
+            }
+        }
         binding.pEditBTN.setOnClickListener {
             val intent: Intent = Intent(this.context, EditProfileActivity::class.java)
             startActivity(intent)

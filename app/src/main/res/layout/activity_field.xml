@@ -153,7 +153,7 @@
         android:background="@drawable/bg_circular_button_blue_dark"
         android:elevation="20dp"
         android:padding="5dp"
-        android:scaleType="fitCenter"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_campnou"

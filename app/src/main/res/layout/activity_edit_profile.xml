@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/epNameET" />
 
     <EditText
-        android:id="@+id/epPasswordActualET"
+        android:id="@+id/epCellET"
         android:layout_width="238dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
@@ -67,7 +67,7 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/montserrat"
-        android:hint="Contraseña actual"
+        android:hint="Celular"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="@color/black"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/epUsernameET" />
 
     <EditText
-        android:id="@+id/epNewPaswordET"
+        android:id="@+id/epLocalET"
         android:layout_width="238dp"
         android:layout_height="52dp"
         android:layout_marginTop="28dp"
@@ -84,15 +84,15 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/montserrat"
-        android:hint="Nueva contraseña"
+        android:hint="Localidad"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColor="#939393"
         android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/epPasswordActualET"
+        app:layout_constraintEnd_toEndOf="@+id/epCellET"
         app:layout_constraintHorizontal_bias="0.962"
         app:layout_constraintStart_toEndOf="@+id/epNewPaswordTV"
-        app:layout_constraintTop_toBottomOf="@+id/epPasswordActualET" />
+        app:layout_constraintTop_toBottomOf="@+id/epCellET" />
 
     <TextView
         android:id="@+id/epNewPaswordTV"
@@ -100,7 +100,7 @@
         android:layout_height="67dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
-        android:text="Constraseña nueva:"
+        android:text="Localidad:"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,7 +122,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/epNewPaswordET" />
+        app:layout_constraintTop_toBottomOf="@+id/epLocalET" />
 
     <TextView
         android:id="@+id/epNameTV"
@@ -152,9 +152,9 @@
         android:id="@+id/epPasswordActualTV"
         android:layout_width="108dp"
         android:layout_height="62dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="35dp"
-        android:text="Contraseña actual:"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Celular:"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -203,7 +203,7 @@
         android:text="Voleybol"
         app:layout_constraintEnd_toStartOf="@+id/epBasketCB"
         app:layout_constraintStart_toEndOf="@+id/epSoccerCB"
-        app:layout_constraintTop_toBottomOf="@+id/epNewPaswordET" />
+        app:layout_constraintTop_toBottomOf="@+id/epLocalET" />
 
     <CheckBox
         android:id="@+id/epBasketCB"
