@@ -29,6 +29,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/photo_perfil" />
 
+
         <TextView
             android:id="@+id/pNameTV"
             android:layout_width="0dp"

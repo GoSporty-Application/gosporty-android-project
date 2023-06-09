@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="25dp"
-        android:alpha="1"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/epBannerET"
-        app:layout_constraintStart_toStartOf="@+id/epBannerET"
-        app:srcCompat="@drawable/photo_perfil"
-        tools:srcCompat="@drawable/photo_perfil" />
-
     <TextView
         android:id="@+id/epBannerET"
         android:layout_width="376dp"
@@ -196,21 +183,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/epBannerET"
         app:layout_constraintEnd_toEndOf="@+id/epBannerET"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2" />
-
-    <ImageButton
-        android:id="@+id/epEditPhotoIB"
-        android:layout_width="49dp"
-        android:layout_height="49dp"
-        android:background="@drawable/edit_photo"
-        android:contentDescription="editPhoto"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:srcCompat="@drawable/edit_photo"
-        tools:srcCompat="@drawable/circular_basic" />
+        app:layout_constraintStart_toEndOf="@+id/epPhotoIV" />
 
     <CheckBox
         android:id="@+id/epSoccerCB"
@@ -241,5 +214,43 @@
         android:text="Baloncesto"
         app:layout_constraintBottom_toBottomOf="@+id/epVoleyCB"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/epCardPhotoCV"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/epBannerET"
+        app:layout_constraintStart_toStartOf="@+id/epBannerET"
+        app:layout_constraintTop_toTopOf="@+id/epBannerET">
+
+        <ImageView
+            android:id="@+id/epPhotoIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/photo_perfil"
+            tools:srcCompat="@drawable/photo_perfil" />
+
+        <ImageButton
+            android:id="@+id/epEditPhotoIB"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/edit_photo"
+            android:clickable="true"
+            android:contentDescription="editPhoto"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/epPhotoIV"
+            app:layout_constraintEnd_toStartOf="@+id/epPhotoIV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/edit_photo"
+            tools:srcCompat="@drawable/circular_basic" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
