@@ -118,9 +118,9 @@ class FieldActivity : AppCompatActivity() {
 
     private fun downloadImages(photoID: String?, logoID: String?, fieldID: String?, siteID: String?){
         Log.e(">>>>>>>", ("PHOTO: "+photoID+" LOGO: "+logoID+" FieldID: "+fieldID +" SiteID "+siteID))
-        Firebase.storage.getReference().child("fields").child(fieldID!!).child(photoID!!+".jpg").downloadUrl.addOnSuccessListener {
-            Glide.with(binding.sSitePhotoIV).load(it).into(binding.sSitePhotoIV)
-        }
+            Firebase.storage.getReference().child("fields").child(fieldID!!).child(photoID!!+".jpg").downloadUrl.addOnSuccessListener {
+                Glide.with(binding.sSitePhotoIV).load(it).into(binding.sSitePhotoIV)
+            }
         Firebase.storage.getReference().child("establishments").child(siteID!!).child(logoID!!+".png").downloadUrl.addOnSuccessListener {
             Glide.with(binding.fSiteLogoIV).load(it).into(binding.fSiteLogoIV)
         }

@@ -42,7 +42,7 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/montserrat"
-        android:hint="Andrés Castro"
+        android:hint="Nombre"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:shadowRadius="1"
@@ -63,8 +63,7 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/montserrat"
-        android:hint="castrofut"
-        android:inputType="textPassword"
+        android:hint="Nombre de usuario "
         android:paddingLeft="10dp"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/epNameET"
@@ -81,7 +80,7 @@
         android:elevation="5dp"
         android:ems="10"
         android:fontFamily="@font/montserrat"
-        android:hint="*******"
+        android:hint="Contraseña actual"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="@color/black"
@@ -124,7 +123,7 @@
         android:id="@+id/epSaveBTN"
         android:layout_width="280dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="140dp"
         android:background="@drawable/bg_button_green"
         android:elevation="5dp"
         android:fontFamily="@font/montserrat"
@@ -212,5 +211,35 @@
         app:layout_constraintTop_toTopOf="@+id/imageView2"
         app:srcCompat="@drawable/edit_photo"
         tools:srcCompat="@drawable/circular_basic" />
+
+    <CheckBox
+        android:id="@+id/epSoccerCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:checked="true"
+        android:text="Fútbol"
+        app:layout_constraintBottom_toBottomOf="@+id/epVoleyCB"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/epVoleyCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Voleybol"
+        app:layout_constraintEnd_toStartOf="@+id/epBasketCB"
+        app:layout_constraintStart_toEndOf="@+id/epSoccerCB"
+        app:layout_constraintTop_toBottomOf="@+id/epNewPaswordET" />
+
+    <CheckBox
+        android:id="@+id/epBasketCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:height="48dp"
+        android:text="Baloncesto"
+        app:layout_constraintBottom_toBottomOf="@+id/epVoleyCB"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

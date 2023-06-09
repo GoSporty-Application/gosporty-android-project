@@ -68,15 +68,10 @@ class SiteActivity : AppCompatActivity() {
     }
 
     fun dowloadImages(logoID: String?, photoID: String?, idSite: String?){
-        Log.e(">>>>>> LOGO -> ", logoID!!)
-        Log.e(">>>>>> photo ->", photoID!!)
-        Log.e(">>>>>> id establishment ->", idSite!!)
         Firebase.storage.getReference().child("establishments").child(idSite!!).child(photoID!!+".jpg").downloadUrl.addOnSuccessListener {
-            Log.e(">>>>>>","Entre a descargar PHOTO")
             Glide.with(binding.sSitePhotoIV).load(it).into(binding.sSitePhotoIV)
         }
         Firebase.storage.getReference().child("establishments").child(idSite!!).child(logoID!!+".png").downloadUrl.addOnSuccessListener {
-            Log.e(">>>>>>","Entre a descargar LOGO")
             Glide.with(binding.sSiteLogoIV).load(it).into(binding.sSiteLogoIV)
         }
     }

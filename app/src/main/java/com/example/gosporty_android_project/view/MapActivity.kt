@@ -39,7 +39,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, OnMapsSdkInitialize
 
         establishmentViewModel.establishments.observe(this){
             for (establishment in it){
-                putNewMarker(establishment.lat, establishment.long, establishment.name, "${establishment.rating}", establishment.id!!)
+                putNewMarker(establishment.lat, establishment.long, establishment.name, "${establishment.rating}", establishment.photo,establishment.id!!)
                 Log.d("MapActivity", "onCreate: ${establishment.lat} ${establishment.long}")
             }
         }
@@ -90,13 +90,13 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, OnMapsSdkInitialize
         }
     }
 
-    fun putNewMarker(lat:Double, long:Double, title:String, rating:String, id:String) : Marker? {
+    fun putNewMarker(lat:Double, long:Double, title:String, rating:String, photo:String, id:String) : Marker? {
         val pos = LatLng(lat, long)
         val marker = gMap.addMarker(
             MarkerOptions()
                 .position(pos)
                 .title(title)
-                .snippet(rating)
+                .snippet("$rating-$photo")
         )
         marker?.setTag(id)
 

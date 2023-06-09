@@ -4,10 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
+import com.bumptech.glide.Glide
 import com.example.gosporty_android_project.R
 import com.example.gosporty_android_project.view.models.Booking
 import com.example.gosporty_android_project.view.models.Reservation
 import com.example.gosporty_android_project.view.viewholders.BookingsViewHolder
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 
 class BookingsAdapter : Adapter<BookingsViewHolder>(){
 
@@ -20,6 +23,9 @@ class BookingsAdapter : Adapter<BookingsViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: BookingsViewHolder, position: Int) {
+        Firebase.storage.getReference().child("fields").child(bookings[position].idField).child(bookings[position].photo + ".jpg").downloadUrl.addOnSuccessListener {
+            Glide.with(holder.photo).load(it).into(holder.photo)
+        }
         holder.typeText.text = bookings[position].type
         holder.siteText.text = bookings[position].site
         holder.fieldText.text = bookings[position].field

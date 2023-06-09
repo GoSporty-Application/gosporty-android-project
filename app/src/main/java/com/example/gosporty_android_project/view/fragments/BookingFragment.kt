@@ -45,14 +45,12 @@ class BookingFragment : Fragment() {
         reservationViewModel.reservations.observe(viewLifecycleOwner){res ->
             for (booking in res){
                 reservations.add(booking)
-                Log.d("BookingFragment","Se pide: $booking")
                 establishmentViewModel.getEstablishment(booking.idEstablishment)
             }
         }
 
         establishmentViewModel.establishment.observe(viewLifecycleOwner){est->
             for (reservation in reservations){
-                Log.d("BookingFragment","Se pide: $est y debe ser igual a ${reservation.idEstablishment}")
                 if (est.id.equals(reservation.idEstablishment)){
                     establishments.add(est)
                     fieldViewModel.getField(reservation.idField)
@@ -63,13 +61,12 @@ class BookingFragment : Fragment() {
 
         fieldViewModel.field.observe(viewLifecycleOwner){field->
             for (reservation in reservations){
-                Log.d("BookingFragment","Se pide: $field y debe ser igual a ${reservation.idField}")
                 if (field.id.equals(reservation.idField)){
                     for (establishment in establishments){
-                        Log.d("BookingFragment","Se pide: ${establishment.id} y debe ser igual a ${reservation.idEstablishment}, 4")
                         if (establishment.id.equals(reservation.idEstablishment)){
+                            var typeField: String = field.name.split(" ")[0]
                             var reserve:Booking = Booking(
-                                "",
+                                typeField,
                                 establishment.name,
                                 field.name,
                                 reservation.day,
@@ -77,7 +74,7 @@ class BookingFragment : Fragment() {
                                 reservation.year,
                                 reservation.start,
                                 reservation.end,
-                                establishment.photo,
+                                field.photo,
                                 establishment.id!!,
                                 field.id,
                                 reservation.id!!
