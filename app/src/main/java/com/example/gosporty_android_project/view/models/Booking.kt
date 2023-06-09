@@ -9,5 +9,8 @@ data class Booking (
     val year: Int = 0,
     val start: Int = 0,
     val end: Int = 0,
-    val photo: String = ""
+    val photo: String = "",
+    val idEstablishment: String = "",
+    val idField: String = "",
+    val idReservation: String = ""
 )
