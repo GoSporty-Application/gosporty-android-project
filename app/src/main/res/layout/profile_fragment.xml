@@ -1,217 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <RelativeLayout
-        android:id="@+id/relative_layout_profile"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="50dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="30dp"
-        android:elevation="10dp"
-        android:background="@drawable/container_blue_profile">
+        android:background="@drawable/container_blue_profile"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/pPhotoProfileIV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:scaleX="0.9"
-            android:scaleY="0.9"
-            android:src="@drawable/photo_profile" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/photo_perfil" />
 
         <TextView
             android:id="@+id/pNameTV"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="80dp"
-            android:layout_toEndOf="@id/pPhotoProfileIV"
-            android:fontFamily="@font/roboto"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/montserrat"
             android:text="Cargando..."
-            android:textColor="#FFFFFF"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pPhotoProfileIV"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/pUsernameTV"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/pNameTV"
-            android:layout_toEndOf="@id/pPhotoProfileIV"
-            android:fontFamily="@font/roboto"
-            android:text="¡Nos tomara un momento!"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
-        <LinearLayout
-            android:id="@+id/pEditProfileLayoutLL"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_below="@id/pUsernameTV"
-            android:layout_toEndOf="@id/pPhotoProfileIV"
-            android:clickable="true"
-            android:layout_marginTop="5dp">
-            <ImageView
-                android:id="@+id/pEditBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:scaleX="1"
-                android:scaleY="0.8"
-                android:src="@drawable/button_edit_profile"/>
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Cargando..."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pPhotoProfileIV"
+            app:layout_constraintTop_toBottomOf="@+id/pNameTV" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/pEditProfileTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/montserrat"
-                android:text="Editar perfil"
-                android:textColor="#FFFFFF" />
-        </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relative_layout_profile_charts"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@id/relative_layout_profile"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="30dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="120dp"
         android:layout_marginStart="30dp"
-        android:elevation="10dp"
-        android:background="@drawable/container_gray_profile">
-
-        <ImageView
-            android:id="@+id/pIconsChartsIV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/icons_profile" />
+        android:layout_marginTop="50dp"
+        android:background="@drawable/container_gray_profile"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/pEditBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
         <TextView
-            android:id="@+id/pCityTextTV"
+            android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="25dp"
-            android:layout_toEndOf="@id/pIconsChartsIV"
+            android:layout_marginStart="30dp"
             android:fontFamily="@font/montserrat"
-            android:textColor="@color/black"
-            android:text="Ciudad actual:"
+            android:text="Telefono:"
             android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/pChartFootballIV"
-            android:layout_width="175dp"
-            android:layout_height="23dp"
-            android:layout_toEndOf="@id/pIconsChartsIV"
-            android:layout_below="@id/pCityTextTV"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/button_green"/>
-
-        <ImageView
-            android:id="@+id/pChartBasketballIV"
-            android:layout_width="141dp"
-            android:layout_height="22dp"
-            android:layout_toEndOf="@id/pIconsChartsIV"
-            android:layout_below="@id/pChartFootballIV"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/button_green"/>
-
-        <TextView
-            android:id="@+id/pPositionTextTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/pChartBasketballIV"
-            android:layout_marginTop="18dp"
-            android:layout_toEndOf="@id/pIconsChartsIV"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/black"
-            android:text="Jugador:"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/pCurrentCityTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/pCityTextTV"
-            android:layout_alignBottom="@id/pCityTextTV"
-            android:layout_toEndOf="@id/pCityTextTV"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/montserrat"
             android:textStyle="bold"
-            android:textSize="16sp"
-            android:text="Cali, Colombia"/>
+            app:layout_constraintBottom_toTopOf="@+id/textView17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
         <TextView
-            android:id="@+id/pCurrentPositionTV"
+            android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/pPositionTextTV"
-            android:layout_alignBottom="@id/pPositionTextTV"
-            android:layout_toEndOf="@id/pPositionTextTV"
-            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/montserrat"
+            android:text="Ciudad:"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:textSize="16sp"
-            android:text="Delantero"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relative_layout_profile_bookings"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/relative_layout_profile_charts"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:elevation="10dp"
-        android:background="@drawable/container_yellow_profile">
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/montserrat"
-            android:textColor="@color/black"
-            android:text="Últimas Reservas"
+            android:text="Deporte favorito:"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView14" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/pCityTV"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="60dp"
-            android:fontFamily="@font/montserrat"
-            android:text="No hay reservas"
-            android:textAlignment="center"
+            android:layout_marginBottom="2dp"
+            android:text="Cargando..."
             android:textSize="16sp"
-            android:textStyle="bold" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="@+id/pCellphoneTV"
+            app:layout_constraintStart_toStartOf="@+id/pCellphoneTV"
+            app:layout_constraintTop_toTopOf="@+id/textView16" />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/pCellphoneTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="30dp"
+            android:text="Cargando..."
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/pSportTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/pCityTV" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/pSportTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Cargando..."
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintEnd_toEndOf="@+id/pCellphoneTV"
+            app:layout_constraintStart_toStartOf="@+id/pCellphoneTV"
+            app:layout_constraintTop_toTopOf="@+id/textView17" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/pEditBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_button_yellow"
+        android:elevation="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Editar perfil"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

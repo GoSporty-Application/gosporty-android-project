@@ -28,11 +28,13 @@ class ProfileFragment : Fragment() {
         val binding:ProfileFragmentBinding = ProfileFragmentBinding.inflate(inflater, container, false)
 
         val user = prefRepository.getUser()
-        Log.d("ProfileFragment", "onCreateView: ${user}")
         binding.pUsernameTV.text = "@${user.username}"
         binding.pNameTV.text = user.name
+        binding.pCityTV.text = user.location
+        binding.pCellphoneTV.text = user.cellphone
+        binding.pSportTV.text = user.favSport
 
-        binding.pEditProfileLayoutLL.setOnClickListener {
+        binding.pEditBTN.setOnClickListener {
             val intent: Intent = Intent(this.context, EditProfileActivity::class.java)
             startActivity(intent)
         }
