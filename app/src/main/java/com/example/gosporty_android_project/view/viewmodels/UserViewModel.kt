@@ -56,4 +56,16 @@ class UserViewModel(): ViewModel() {
             }
         }
     }
+
+    fun editUser(id:String, user:User){
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                val res = Firebase.firestore.collection("user").document(
+                    id
+                ).set(user).await()
+            } catch (e:java.lang.Exception){
+                e.printStackTrace()
+            }
+        }
+    }
 }
