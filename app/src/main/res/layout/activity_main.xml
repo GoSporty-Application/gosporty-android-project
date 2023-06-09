@@ -19,7 +19,7 @@
         tools:srcCompat="@drawable/bg_balonfutbol2" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/epPhotoIV"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@+id/sSitePhotoIV"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/epPhotoIV" />
 
     <EditText
         android:id="@+id/liPasswordET"

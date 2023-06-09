@@ -18,13 +18,15 @@
 
         <ImageView
             android:id="@+id/pPhotoProfileIV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:scaleX="0.9"
-            android:scaleY="0.9"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/photo_profile" />
 
         <TextView
@@ -33,6 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="80dp"
             android:layout_toEndOf="@id/pPhotoProfileIV"
             android:fontFamily="@font/roboto"
@@ -46,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/pNameTV"
+            android:layout_marginStart="15dp"
             android:layout_toEndOf="@id/pPhotoProfileIV"
             android:fontFamily="@font/roboto"
             android:text="¡Nos tomara un momento!"
@@ -59,14 +63,16 @@
             android:layout_toEndOf="@id/pPhotoProfileIV"
             android:clickable="true"
             android:layout_marginTop="5dp">
+
             <ImageView
                 android:id="@+id/pEditBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
                 android:layout_weight="1"
                 android:scaleX="1"
                 android:scaleY="0.8"
-                android:src="@drawable/button_edit_profile"/>
+                android:src="@drawable/button_edit_profile" />
 
             <TextView
                 android:id="@+id/pEditProfileTV"
