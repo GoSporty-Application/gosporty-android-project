@@ -19,9 +19,3 @@ GoSporty es una aplicación móvil que facilita la reserva de espacios físicos 
 
 Para obtener más detalles sobre la aplicación y su diseño, consulta nuestro documento en [Figma](https://www.figma.com/file/K8WeeeYBjN7GZasTSp9F5I/GoSporty---Mockups?type=design&node-id=0%3A1&mode=design&t=dhKlpGrFQghla8Cj-1) y la documentación sobre la idea de negicio en [Google Docs](https://docs.google.com/document/d/1YLXPqNNQv9Ih85bIpKzERmvXJs7QtnuJDq8eKiXmYxo/edit?usp=sharing).
 
-## Instalación
-
-Para probar la aplicación en tu dispositivo Android, sigue estos pasos:
-
-1. Clona este repositorio en tu máquina local.
-
